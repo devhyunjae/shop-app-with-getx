@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practice/pages/home.dart';
+import 'package:shop_app_with_getx/pages/home.dart';
 
 void main() {
   runApp(MyApp());

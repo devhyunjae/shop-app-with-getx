@@ -1,6 +1,7 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:practice/controllers/products_controller.dart';
+import 'package:shop_app_with_getx/controllers/products_controller.dart';
 
 class HomeView extends StatelessWidget {
   final ProductsController productsController = Get.put(ProductsController());
@@ -55,8 +56,9 @@ class HomeView extends StatelessWidget {
                                   width: 100,
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
-                                      image: NetworkImage(productsController
-                                          .products[index]["image"]),
+                                      image: CachedNetworkImageProvider(
+                                          productsController.products[index]
+                                              ["image"]),
                                       fit: BoxFit.fill,
                                     ),
                                   ),
@@ -128,7 +130,7 @@ class HomeView extends StatelessWidget {
                 width: 100,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: NetworkImage(
+                    image: CachedNetworkImageProvider(
                         productsController.products[index]["image"]),
                     fit: BoxFit.fill,
                   ),

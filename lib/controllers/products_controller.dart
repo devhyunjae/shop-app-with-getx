@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:practice/controllers/products_repository.dart';
+import 'package:shop_app_with_getx/controllers/products_repository.dart';
 
 class ProductsController extends GetxController {
   ProductsRepository productsRepository = ProductsRepository();
